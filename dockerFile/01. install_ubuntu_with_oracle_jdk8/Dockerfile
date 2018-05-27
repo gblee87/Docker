@@ -11,5 +11,5 @@ RUN apt-get -y install software-properties-common && apt-add-repository -y ppa:w
  
 RUN echo "jdk 8  install completed"
 
-#vi install
-apt-get install vi
+#vim install
+apt-get install vim
