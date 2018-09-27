@@ -14,7 +14,7 @@ groupadd -aG docker ubuntu
 # download and extract file
 wget https://download.docker.com/linux/static/stable/x86_64/docker-18.06.1-ce.tgz;
 tar xvf ./docker-18.06.1-ce.tgz -C /engn/docker/ubuntu18;
-rm /usr/bin/docker;
+rm /usr/bin/docker*;
 
 # link docker instruction to path
 ln -s /engn/docker/ubuntu18/docker/docker /usr/bin/docker;
