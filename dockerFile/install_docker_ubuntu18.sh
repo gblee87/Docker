@@ -25,5 +25,7 @@ ln -s  /engn/docker/ubuntu18/docker/docker-init /usr/bin/docker-init;
 ln -s  /engn/docker/ubuntu18/docker/docker-proxy /usr/bin/docker-proxy;
 ln -s  /engn/docker/ubuntu18/docker/docker-runc /usr/bin/docker-runc
 
+# start docker daemon
+dockerd &;
 
 docker -v
