@@ -1,0 +1,10 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get-install -y wget && apt-get install -y openjdk-8-jdk
+RUN mkdir -p /engn/ciserv && mkdir -p /logs/tomcat/9.0/servers/tomcat_8080
+
+COPY ./ciserv/engn/ciserv
+
+EXPOSE 8080
+
+CMD ["sh", "-c", "/engn/ciserv/bin/start.sh && tail -f /engn/ciserv/tomcat/logs/dummy.log"]
