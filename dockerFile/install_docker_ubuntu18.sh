@@ -17,15 +17,17 @@ tar xvf ./docker-18.06.1-ce.tgz -C /engn/docker/ubuntu18;
 rm /usr/bin/docker*;
 
 # link docker instruction to path
-ln -s /engn/docker/ubuntu18/docker/docker /usr/bin/docker;
-ln -s /engn/docker/ubuntu18/docker/docker-containerd /usr/bin/docker-containerd;
-ln -s /engn/docker/ubuntu18/docker/docker-containerd-shim /usr/bin/docker-containerd-shim;
-ln -s /docker/ubuntu18/docker/dockerd /usr/bin/dockerd;
+ln -s  /engn/docker/ubuntu18/docker/docker /usr/bin/docker;
+ln -s  /engn/docker/ubuntu18/docker/docker-containerd /usr/bin/docker-containerd;
+ln -s  /engn/docker/ubuntu18/docker/docker-containerd-shim /usr/bin/docker-containerd-shim;
+ln -s  /engn/docker/ubuntu18/docker/dockerd /usr/bin/dockerd;
 ln -s  /engn/docker/ubuntu18/docker/docker-init /usr/bin/docker-init;
 ln -s  /engn/docker/ubuntu18/docker/docker-proxy /usr/bin/docker-proxy;
-ln -s  /engn/docker/ubuntu18/docker/docker-runc /usr/bin/docker-runc
+ln -s  /engn/docker/ubuntu18/docker/docker-runc /usr/bin/docker-runc;
 
 # start docker daemon
-dockerd &;
+dockerd & 
+
+sleep 3;
 
 docker -v
