@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_USER: nodebird
+            MYSQL_PASSWORD: nodebird
+            MYSQL_DATABASE: mysqldb
+        volumes:
+            - data:/var/lib/mysql
+        container_name: nodebird-mysql
+        prots:
+            - 3306:3306
+volumes:
+    data:
