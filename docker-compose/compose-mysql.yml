@@ -13,7 +13,7 @@ services:
         volumes:
             - data:/var/lib/mysql
         container_name: nodebird-mysql
-        prots:
+        ports:
             - 3306:3306
 volumes:
     data:
